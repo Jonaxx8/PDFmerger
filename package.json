@@ -1,0 +1,14 @@
+{
+  "name": "pdfmerger",
+  "version": "1.0.0",
+  "description": "pdf merger",
+  "main": "merge-pdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jonaxx",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}
