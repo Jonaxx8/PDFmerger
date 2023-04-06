@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>PDF Merger</title>
-  <!-- Include the PDF.js library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <title>PDF Merger</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include the PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
 </head>
+
 <body>
-  <h1>PDF Merger</h1>
-  <p>Select two PDF files to merge:</p>
-  <input type="file" id="fileInput1"><br><br>
-  <input type="file" id="fileInput2"><br><br>
-  <button id="mergeButton">Merge PDFs</button>
-  
-  <!-- Include the JavaScript code for merging PDFs -->
-  <script src="index.js"></script>
+    <h1>PDF Merger</h1>
+    <div class="container">
+        <p>Select two PDF files to merge:</p>
+        <input type="file" id="fileInput1"><br><br>
+        <input type="file" id="fileInput2"><br><br>
+        <button id="mergeButton">Merge PDFs</button>
+    </div>
+    <!-- Include the JavaScript code for merging PDFs -->
+    <script src="index.js"></script>
 </body>
+
 </html>
