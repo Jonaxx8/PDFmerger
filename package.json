@@ -9,6 +9,9 @@
   "author": "jonaxx",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.22",
     "pdf-lib": "^1.17.1"
   }
 }
