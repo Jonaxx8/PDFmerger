@@ -21,7 +21,18 @@ app.post('/merge', upload.array('pdf-files'), async (req, res) => {
     const filePath = path.join(__dirname, fileName);
 
     await fs.writeFile(filePath, mergedPdf);
-    res.download(filePath, fileName);
+
+    res.download(filePath, fileName, (err) => {
+      if (err) {
+        console.error(err);
+        return res.status(500).send('Error downloading merged PDF');
+      }
+
+      // Delete downloaded file after sending it
+      fs.unlink(filePath, (err) => {
+        if (err) console.error(err);
+      });
+    });
   } catch (err) {
     console.error(err);
     res.status(500).send('Error merging PDFs');
