@@ -5,6 +5,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
+app.use(express.static("public"));
 const upload = multer({ dest: 'uploads/' });
 
 app.get('/', (req, res) => {
