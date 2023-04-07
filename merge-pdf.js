@@ -8,12 +8,17 @@ const app = express();
 app.use(express.static("public"));
 const upload = multer({ dest: 'uploads/' });
 
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
 app.post('/merge', upload.array('pdf-files'), async (req, res) => {
   const files = req.files.map((file) => file.path);
+
+  if (!files.length) {
+    return res.status(400).send('No files uploaded. Go back to previous page!');
+  }
 
   try {
     const mergedPdf = await mergePDFs(files);

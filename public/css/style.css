@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin-top: 15%;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
@@ -7,8 +7,8 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 2rem;
-  color: #333;
+  /* margin-top: 2rem; */
+  color: #000000;
   text-shadow: 1px 1px 0px #fff;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -32,13 +32,40 @@ label {
 input[type="file"] {
   display: block;
   margin-bottom: 2rem;
+  margin: 10px 0;
+  color: black;
+  background-color: #f5f5f5;
+  border-color: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.reset-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset-btn:hover {
+  background-color: #e1c1c1;
 }
 
 button[type="submit"] {
   display: block;
   margin: 0 auto;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -51,17 +78,7 @@ button[type="submit"]:hover {
   background-color: #444;
 }
 
-.browse-btn,
-.reset-btn,
-.submit-btn {
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  cursor: pointer;
-}
+
 /* Animations */
 
 @keyframes pulse {

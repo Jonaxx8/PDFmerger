@@ -10,7 +10,7 @@
   <h1>PDF Merger</h1>
   <form action="/merge" method="post" enctype="multipart/form-data">
     <label for="pdf-files">Select PDF files to merge:</label>
-    <input type="file" name="pdf-files" id="pdf-files" multiple>
+    <input type="file" name="pdf-files" id="pdf-files" multiple required>
     <button class="reset-btn" type="reset">Reset</button>
     <br>
     <button type="submit">Merge PDFs</button>
