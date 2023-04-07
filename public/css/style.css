@@ -51,6 +51,17 @@ button[type="submit"]:hover {
   background-color: #444;
 }
 
+.browse-btn,
+.reset-btn,
+.submit-btn {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+}
 /* Animations */
 
 @keyframes pulse {
