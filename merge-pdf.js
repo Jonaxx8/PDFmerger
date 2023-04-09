@@ -66,5 +66,5 @@ async function mergePDFs(files) {
 }
 
 app.listen(PORT, () => {
-  console.log('Server started on http://localhost:3000');
+  console.log('Server started on http://localhost:3030');
 });

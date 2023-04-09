@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PDF Merger</title>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+  <div id="particles-js"></div>
   <h1>PDF Merger</h1>
   <form action="/merge" method="post" enctype="multipart/form-data">
     <label for="pdf-files">Select PDF files to merge:</label>
@@ -16,5 +18,11 @@
     <button type="submit">Merge PDFs</button>
     
   </form>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('particles.js loaded');
+  });
+</script>
+
 </body>
 </html>
