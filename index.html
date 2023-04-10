@@ -16,13 +16,27 @@
     <button class="reset-btn" type="reset">Reset</button>
     <br>
     <button type="submit">Merge PDFs</button>
-    
   </form>
+  <br>
+  <h1>Delete pages from PDF</h1>
+  <form action="/delete-pages" method="post" enctype="multipart/form-data">
+    <label for="pdf-file">Select PDF file to delete pages:</label>
+    <input type="file" name="pdf-file" id="pdf-file" required>
+    <br>
+    <label for="pagesToDelete">Enter comma separated page numbers to delete:</label>
+    <input type="text" name="pagesToDelete" id="pagesToDelete" required>
+
+
+    <button class="reset-btn" type="reset">Reset</button>
+    <br><br>
+    <button type="submit">Delete pages from PDF</button>
+  </form>
+  
   <script>
     particlesJS.load('particles-js', 'particles.json', function() {
     console.log('particles.js loaded');
   });
-</script>
+  </script>
 
 </body>
 </html>
