@@ -51,7 +51,6 @@ app.post('/merge', upload.array('pdf-files'), async (req, res) => {
         return res.status(500).send('Error downloading merged PDF');
       }
 
-      // Delete downloaded file after sending it
       fs.unlink(filePath, (err) => {
         if (err) console.error(err);
       });
@@ -61,7 +60,6 @@ app.post('/merge', upload.array('pdf-files'), async (req, res) => {
     res.status(500).send('Error merging PDFs');
   }
 
-  // Delete uploaded files after merging
   for (const file of files) {
     await fs.unlink(file);
   }
