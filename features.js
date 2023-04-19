@@ -97,9 +97,6 @@ app.post('/delete-pages', upload.single('pdf-file'), async (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}`);
-});
 async function mergePDFs(files) {
   const mergedPdf = await PDFDocument.create();
 
@@ -136,4 +133,6 @@ async function deletePagesFromPDF(pdfPath, pagesToDelete) {
 module.exports = {
   deletePagesFromPDF
 };
-
+app.listen(PORT, () => {
+  console.log(`Server started on http://localhost:${PORT}`);
+});
